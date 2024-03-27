@@ -1,6 +1,6 @@
 # Virulence-Factors-Identification
 
-Hello and thank you for visiting my pipeline for Campylobacter jejuni virulence factor identification. This readme file provides a step-by-step guide to reproduce the work conducted in the study. 
+Hello and thank you for visiting my pipeline for virulence factor identification. This readme file provides a step-by-step guide to reproduce the work conducted in the study. 
 
 At first you should download some bacterial comlpete genomes to extract the virulence factors from them.
 
@@ -23,13 +23,13 @@ At first you should download some bacterial comlpete genomes to extract the viru
 
 •	Preprocess the genes by running local Blastx against the non-redundant UniProtKB/Swiss-Prot database. Set the parameters as follows: E-value (1.0E-3), number of hits (20), word size (3), and high-scoring pair (HSP) cutoff (33).
 
-•	Exclude genes with no blast hits, genes with a sim mean lower than 65%, and genes with no C. jejuni hits based on the obtained Blast results.
+•	Exclude genes with no blast hits, genes with a sim mean lower than 65%, and genes with no "bacterial" hits based on the obtained Blast results.
 
 •	Conduct GO mapping to assign functional gene ontology terms for the BLAST hits using curated gene ontology annotated proteins by Goa version 2022.08.
 
 •	Annotate protein BLAST hits by assigning each GO term to its corresponding gene in the fasta file.
 
-•	Perform Gene Ontology enrichment analysis using Fisher’s Exact Test. Compare the output genes' codes against the genes' codes of the reference Campylobacter jejuni subsp. jejuni NCTC 11168. Set the parameters as follows: filter value (0.05), P-value filter mode, annotation type (GO IDs), and the identified GO categories (biological processes, molecular functions, and cellular components).
+•	Perform Gene Ontology enrichment analysis using Fisher’s Exact Test. Compare the output genes' codes against the genes' codes of the reference bacteria. Set the parameters as follows: filter value (0.05), P-value filter mode, annotation type (GO IDs), and the identified GO categories (biological processes, molecular functions, and cellular components).
 
 
 I am open for any comments...
